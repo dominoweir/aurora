@@ -1,8 +1,8 @@
 {
-  "name": "YourApplicationName",
-  "version": "0.0.0",
+  "name": "Aurora",
+  "version": "0.0.1",
   "description": "Simple description of the application.",
-  "author": "You",
+  "author": "Domino Weir",
   "repository": "https://github.com/dominoweir/aurora",
   "main": "gruntfile.js",
   "engines": {
