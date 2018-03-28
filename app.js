@@ -11,6 +11,6 @@ firebase.initializeApp(config);
 // Get a reference to the database service
 var db = firebase.database().ref();
 // create new references
-var songsRef = db.ref('songs');
-var tabsRef = db.ref('tabs');
-var userRef = db.ref('users');
+var songsRef = db.child('songs');
+var tabsRef = db.child('tabs');
+var userRef = db.child('users');
