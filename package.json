@@ -1,7 +1,8 @@
 {
   "name": "playaurora",
   "version": "0.1.0",
-  "description": "A starter project for AngularJS",
+  "description": "A website for Aurora, the guitar teaching tool.",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dominoweir/aurora.git"
