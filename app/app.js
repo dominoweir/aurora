@@ -12,10 +12,3 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
 
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
-
-// Get a reference to the database service
-var db = firebase.database();
-
-var songsRef = db.ref('songs');
-var tabsRef = db.ref('tabs');
-var userRef = db.ref('users');
