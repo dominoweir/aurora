@@ -2,6 +2,7 @@
   "name": "playaurora",
   "version": "0.1.0",
   "description": "A website for Aurora, the guitar teaching tool.",
+  "author":"Domino Weir",
   "license": "MIT",
   "private": true,
   "dependencies": {
