@@ -47,7 +47,7 @@ fs.readFileSync("../Aurora_v1/songs/freefallin/tabs.txt", "utf-8",  function rea
     }
     ffTabs = data;
 });
-fs.readFileSync("../Aurora_v1/songs/wonderwall/tabs.txt", "utf-8" function read(err, data) {
+fs.readFileSync("../Aurora_v1/songs/wonderwall/tabs.txt", "utf-8", function read(err, data) {
     if (err) {
         throw err;
     }
