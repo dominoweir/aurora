@@ -16,7 +16,6 @@
     "url": "https://github.com/dominoweir/aurora/issues"
   },
   "homepage": "https://github.com/dominoweir/aurora#readme",
-  "dependencies": {
-    "fs": "0.0.1-security"
+  "devDependencies": {
   }
 }

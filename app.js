@@ -32,9 +32,27 @@ var don = users.push({
 var donKey = don.key;
 
 // get tabs for each song in a string
-var utbTabs = fs.readFileSync("../Aurora_v1/songs/underthebridge/tabs.txt", "utf-8");
-var ffTabs = fs.readFileSync("../Aurora_v1/songs/freefallin/tabs.txt", "utf-8");
-var wwTabs = fs.readFileSync("../Aurora_v1/songs/wonderwall/tabs.txt", "utf-8");
+var utbTabs;
+var ffTabs;
+var wwTabs;
+fs.readFileSync("../Aurora_v1/songs/underthebridge/tabs.txt", "utf-8", function read(err, data) {
+    if (err) {
+        throw err;
+    }
+    utbTabs = data;
+});
+fs.readFileSync("../Aurora_v1/songs/freefallin/tabs.txt", "utf-8",  function read(err, data) {
+    if (err) {
+        throw err;
+    }
+    ffTabs = data;
+});
+fs.readFileSync("../Aurora_v1/songs/wonderwall/tabs.txt", "utf-8" function read(err, data) {
+    if (err) {
+        throw err;
+    }
+    wwTabs = data;
+});
 
 songs.push(
   {
