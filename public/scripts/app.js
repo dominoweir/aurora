@@ -73,7 +73,7 @@ Aurora.prototype.loadUserSongs = function(){
 };
 
 Aurora.prototype.loadAllSongs = function(){
-  
+
 };
 
 Aurora.prototype.addNewSong = function(){
@@ -85,5 +85,9 @@ Aurora.prototype.editSongDetails = function(){
 };
 
 Aurora.prototype.deleteSong = function(){
+
+};
+
+Aurora.prototype.searchSong() = function(){
 
 };
