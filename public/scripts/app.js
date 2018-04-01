@@ -88,6 +88,6 @@ Aurora.prototype.deleteSong = function(){
 
 };
 
-Aurora.prototype.searchSong() = function(){
+Aurora.prototype.searchSong = function(){
 
 };
