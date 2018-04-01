@@ -69,7 +69,7 @@ Aurora.prototype.onAuthStateChanged = function(user) {
 };
 
 Aurora.prototype.loadUserSongs = function(){
-  var currentUser = this.auth.currentUser.uid;
+
 };
 
 Aurora.prototype.loadAllSongs = function(){
