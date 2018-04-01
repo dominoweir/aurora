@@ -1,0 +1,43 @@
+* {
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+.home {
+  background: #8c3ef1;
+  background: -moz-linear-gradient(-45deg, #8c3ef1 0%, #4327fa 100%);
+  background: -webkit-linear-gradient(-45deg, #8c3ef1 0%, #4327fa 100%);
+}
+
+.browse {
+  background: #39dec0;
+  background: -moz-linear-gradient(-45deg, #39dec0 0%, #08df64 100%);
+  background: -webkit-linear-gradient(-45deg, #39dec0 0%, #08df64 100%);
+}
+
+.profile {
+  background: #4363e6;
+  background: -moz-linear-gradient(-45deg, #4363e6 0%, #11dae9 100%);
+  background: -webkit-linear-gradient(-45deg, #4363e6 0%, #11dae9 100%);
+}
+
+.navbar-brand img {
+   height: 20px;
+}
+
+.navbar-custom {
+    background-color: rgba(255, 255, 255, .95) !important;
+    font-weight: 400;
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: #7F7F7F;
+}
+/* change the color of hovered links */
+.navbar-custom .nav-item:hover .nav-link {
+    color: #815AFF;
+}
+/* change the color of active links */
+.navbar-custom .nav-item.active .nav-link {
+    color: #6434FF;
+}
