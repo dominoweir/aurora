@@ -1,0 +1,17 @@
+.home {
+  background: #8c3ef1;
+  background: -moz-linear-gradient(-45deg, #8c3ef1 0%, #4327fa 100%);
+  background: -webkit-linear-gradient(-45deg, #8c3ef1 0%, #4327fa 100%);
+}
+
+.browse {
+  background: #39dec0;
+  background: -moz-linear-gradient(-45deg, #39dec0 0%, #08df64 100%);
+  background: -webkit-linear-gradient(-45deg, #39dec0 0%, #08df64 100%);
+}
+
+.profile {
+  background: #4363e6;
+  background: -moz-linear-gradient(-45deg, #4363e6 0%, #11dae9 100%);
+  background: -webkit-linear-gradient(-45deg, #4363e6 0%, #11dae9 100%);
+}
