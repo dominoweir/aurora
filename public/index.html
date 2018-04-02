@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="aurora.css">
 </head>
-<body class="home">
+<body class="home" onload="initAurora()">
 
     <nav class="navbar navbar-custom navbar-expand-md navbar-light bg-light">
       <a class="navbar-brand" href="index.html"><img src="logo.png" /></a>
@@ -27,8 +27,8 @@
               <li class="nav-item">
                   <a class="nav-link" href="#">Browse Songs</a>
               </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Log In</a>
+              <li id="sign-in" class="nav-item">
+                  <a id="sign-in-text" class="nav-link" href="">Log In</a>
               </li>
           </ul>
       </div>
@@ -38,11 +38,10 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-<!--  <script src="bundle.js"></script> -->
+  <script src="scripts/app.js"></script>
   </body>
 </html>
