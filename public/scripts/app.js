@@ -44,6 +44,7 @@ function onStateChanged() {
 
 function signIn() {
   var user = firebase.auth().currentUser;
+  console.log("Sign in/out");
   // if someone is logged in, log them out
   if (user) {
     console.log("Sign out user");
