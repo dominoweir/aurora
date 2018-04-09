@@ -42,15 +42,33 @@
   </header>
 
   <main>
-    <div class="row">
+    <div class="container">
+      <div class="row">
       <div class="col-md-12 page-title-div">
         <h1 class="text-center page-title">Profile</h1>
       </div>
+      <section class="my-section profile-info">
+        <img id="profile-image" src="https://demos.subinsb.com/isl-profile-pic/image/person.png" alt="Profile Picture">
+        <div id="profile-text" style="display: inline-block;">
+          <div id="name">
+            First Last
+          </div>
+          <div id="email">
+            email
+          </div>
+        </div>
+      </section>
       <div class="col-md-12">
         <div id="toggle">
-          <h5 class="toggle-label">Downloads</h5>
-          <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
-          <h5 class="toggle-label">Uploads</h5>
+          <div class="toggle-left">
+            <h5 class="toggle-label">Downloads</h5>
+          </div>
+          <div class="toggle-center">
+            <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
+          </div>
+          <div class="toggle-right">
+            <h5 class="toggle-label">Uploads</h5>
+          </div>
         </div>
       </div>
       <div class="col-md-12">
@@ -70,6 +88,7 @@
           Hotel California<span style="font-weight: 100">&emsp;by&emsp;</span>The Eagles
         </div>
       </div>
+    </div>
     </div>
   </main>
 
