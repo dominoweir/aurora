@@ -73,3 +73,18 @@ function loadAllSongs() {
 function startDownload(){
   console.log("Starting download...");
 }
+
+function loadProfile(){
+  var user = firebase.auth().currentUser;
+
+  if (user != null) {
+    user.providerData.forEach(function (profile) {
+      var name = profile.displayName;
+      var email = profile.email;
+      var photo = profile.photoURL;
+      document.getElementById("name").innerHTML(name);
+      document.getElementById("email").innerHTML(email);
+      document.getElementById("profile-image").src=photo;
+    });
+  }
+}
