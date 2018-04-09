@@ -153,6 +153,13 @@ label:active:after {
 /* things to change to make it responsive */
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+  .page-title {
+    font-size: 2em;
+  }
+  .page-title-div {
+    padding: 20px;
+    margin-top: 60px;
+  }
   .song {
     max-width: 90%;
     font-size: 14px;
@@ -161,6 +168,12 @@ label:active:after {
     padding: 10px 15px 7px 15px;
     margin: 0 auto 10px auto;
     border-radius: 3px;
+  }
+  .song .fa-arrow-alt-circle-down {
+    font-size: 18px;
+  }
+  .song .fa-check-circle {
+    font-size: 18px;
   }
 }
 
