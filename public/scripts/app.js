@@ -46,7 +46,7 @@ function signIn() {
 function loadAllSongs() {
 
   var parent = document.getElementById("song-parent");
-  var download = "<i class='far fa-arrow-alt-circle-down' onclick = 'startDownload()' ></i>";
+  var download = "<i class='far fa-arrow-alt-circle-down' onclick = 'startDownload(this.id)' ></i>";
   var check = "<i class='far fa-check-circle hide-element'></i>";
   var span = "<span style='font-weight: 100'>&emsp;by&emsp;</span>";
 
@@ -58,19 +58,22 @@ function loadAllSongs() {
   .then(function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
       var childData = childSnapshot.val();
+      console.log(childData);
       var artist = childData.artist;
       var title = childData.title;
+      var id = childSnapshot.key;
 
       // create a new HTML div element and basically add it to the end of the parent
       var div = document.createElement("div");
       div.className = "song";
+      div.id = id.toString();
       div.innerHTML = title + span + artist + download + check;
       parent.appendChild(div);
     });
   });
 };
 
-function startDownload(){
+function startDownload(id){
   console.log("Starting download...");
 }
 
