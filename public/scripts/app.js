@@ -41,16 +41,16 @@ function signIn() {
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithRedirect(provider);
   }
-};
+}
 
 function loadAllSongs() {
 
   var parent = document.getElementById("song-parent");
-  var download = "<i class='far fa-arrow-alt-circle-down' onclick = 'startDownload(this.id)' ></i>";
+  var download = "<i class='far fa-arrow-alt-circle-down'></i>";
   var check = "<i class='far fa-check-circle hide-element'></i>";
   var span = "<span style='font-weight: 100'>&emsp;by&emsp;</span>";
 
-  // initialize firebase and get songs list
+  // get songs list
   var ref = firebase.database().ref("songs/");
 
   // this doesn't loook like it, but it's basically a for loop
@@ -68,13 +68,50 @@ function loadAllSongs() {
       div.className = "song";
       div.id = id.toString();
       div.innerHTML = title + span + artist + download + check;
+      div.addEventListener('click', function(){
+        startDownload(this.id);
+      });
       parent.appendChild(div);
     });
   });
-};
+}
+
+function escapeEmailAddress(email) {
+  if (!email) return false
+
+  // Replace '.' (not allowed in a Firebase key) with ',' (not allowed in an email address)
+  email = email.toLowerCase();
+  email = email.replace(/\./g, ',');
+  return email;
+}
 
 function startDownload(id){
   console.log("Starting download...");
+  var div = document.getElementById(id);
+  /*
+  var download = div.childNodes[0];
+  var check = div.childNodes[1];
+  check.classList.remove("hide-element");
+  download.classList.add("hide-element");
+  */
+
+  // because of the stupid comma/period thing
+  var currentEmail = escapeEmailAddress(firebase.auth().currentUser.email);
+
+  // this doesn't look like it, but it's basically a for loop over the users list
+  firebase.database().ref("users/").once("value")
+  .then(function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      var eachEmail = childSnapshot.val().email;
+      var uid = childSnapshot.key;
+      if(eachEmail == currentEmail){
+        var userKey = uid;
+        console.log(id);
+        firebase.database().ref("users/" + userKey + "/queue").set("1");
+        firebase.database().ref("users/" + userKey + "/downloading").set(id);
+      }
+    });
+  });
 }
 
 function loadProfile(){
