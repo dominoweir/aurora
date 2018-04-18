@@ -115,7 +115,6 @@ function startDownload(id){
 }
 
 function loadProfile(){
-<<<<<<< HEAD
   var img = document.getElementById("profile-image");
   var name = document.getElementById("name");
   var email = document.getElementById("email");
@@ -132,17 +131,4 @@ function loadProfile(){
       email.innerHTML = "";
     }
   });
-=======
-  var user = firebase.auth().currentUser;
-  if (user != null) {
-    user.providerData.forEach(function (profile) {
-      var name = profile.displayName;
-      var email = profile.email;
-      var photo = profile.photoURL;
-      document.getElementById("name").innerHTML(name);
-      document.getElementById("email").innerHTML(email);
-      document.getElementById("profile-image").src=photo;
-    });
-  }
->>>>>>> rebase
 }
