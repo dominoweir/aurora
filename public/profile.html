@@ -47,31 +47,28 @@
       <div class="col-md-12 page-title-div">
         <h1 class="text-center page-title">Profile</h1>
       </div>
-      <section class="my-section profile-info">
+
+      <div class="my-section profile-info">
         <img id="profile-image" src="https://demos.subinsb.com/isl-profile-pic/image/person.png" alt="Profile Picture">
-        <div id="profile-text" style="display: inline-block;">
+        <div id="profile-text">
           <div id="name">
             First Last
           </div>
           <div id="email">
             email
           </div>
-        </div>
-      </section>
-      <div class="col-md-12">
-        <div id="toggle">
-          <div class="toggle-left">
-            <h5 class="toggle-label">Downloads</h5>
+          <div id="device-id" class="hide-element">
+            Device ID:
           </div>
-          <div class="toggle-center">
-            <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
-          </div>
-          <div class="toggle-right">
-            <h5 class="toggle-label">Uploads</h5>
+          <div id="device-id-form">
+            <input id="id-form" type="text" name="ID" placeholder="Your Device ID">
+            <input type="submit" value="Submit">
           </div>
         </div>
       </div>
+
       <div class="col-md-12">
+        <div class="song" id="downloads-label">Downloads</div>
   			<div class="song">
           Wonderwall<span style="font-weight: 100">&emsp;by&emsp;</span>Oasis
         </div>
