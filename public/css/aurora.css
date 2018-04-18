@@ -77,11 +77,12 @@
 
 .profile-info {
   margin-top: 0;
-  display: inline;
 }
 
 #profile-text {
   margin-left: 50px;
+  display: inline-block;
+  transform: translateY(30px);
 }
 
 #name {
@@ -189,29 +190,62 @@
   display: none;
 }
 
-#toggle {
-  display: flex;
-  display: -webkit-flex;
-  margin-bottom: 30px;
+#downloads-label {
+  color: white;
+  font-weight: bold;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
 }
-.toggle-left {
-  display: inline-block;
-  flex: 1;
+
+#downloads-label:hover, #downloads-label:focus, #downloads-label:active {
+  box-shadow: none;
+  -webkit-transform: scale(1.0);
+  transform: scale(1.0);
 }
-.toggle-right {
-  display: inline-block;
-  flex: 1;
+
+#device-id {
+  margin-top: 20px;
+  font-size: 12px;
+  color: white;
 }
-.toggle-center {
-  display: inline-block;
+
+#id-form {
+  font-family: 'Cabin';
+  margin-top: 20px;
+  background: rgba(255,255,255,.1);
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  color: white;
+  height: 30px;
+  width: 200px;
+  padding: 8px;
 }
-.toggle-left .toggle-label {
-  float: right;
-  margin-top: 40px;
+
+#id-form::placeholder {
+  font-family: 'Cabin';
+  font-size: 12px;
+  color: white;
 }
-.toggle-right .toggle-label {
-  float: left;
-  margin-top: 40px;
+
+#device-id-form > input[type=submit] {
+  font-size: 12px;
+  color: white;
+  height: 30px;
+  background-color: #7F7F7F;
+  border-radius: 3px;
+  border-width: 0;
+  padding: 8px;
+}
+
+#device-id-form > input[type=submit]:hover {
+	background-color: #3A11BE;
+}
+#device-id-form > input[type=submit]:active {
+	position:relative;
+	top:1px;
+}
 
 }
 input[type=checkbox]{
@@ -253,12 +287,6 @@ label:active:after {
 	width: 90px;
 }
 
-.toggle-label {
-  margin: 0 20px 0 20px;
-  font-weight: 400;
-  color: white;
-}
-
 /* things to change to make it responsive */
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
@@ -290,20 +318,6 @@ label:active:after {
   .navbar-light .navbar-toggler {
     border-color: rgba(0,0,0, 0);
   }
-  .toggle-label {
-    margin: 0 20px 0 20px;
-    font-size: 12px;
-  }
-  .toggle-left .toggle-label, .toggle-right .toggle-label {
-    margin-top: 10px;
-  }
-  #toggle {
-    margin-bottom: 40px;
-  }
-  .toggle-center {
-    height: 40px;
-    margin-top: -30px;
-  }
   label {
   	width: 80px;
   	height: 40px;
@@ -314,6 +328,54 @@ label:active:after {
   }
   label:active:after {
   	width: 60px;
+  }
+  #profile-image{
+    width: 75px;
+    height: 75px;
+    padding: 3px;
+    margin-left: 5px;
+  }
+  #profile-text {
+    margin-left: 20px;
+  }
+  #name {
+    font-size: 14px;
+  }
+  #email {
+    font-size: 12px;
+  }
+  /* #guitar-image {
+    width: 500px;
+    top: 150px;
+    left: 17px;
+  } */
+  #id-form {
+    font-family: 'Cabin';
+    margin-top: 20px;
+    background: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 3px;
+    font-size: 10px;
+    color: white;
+    height: 30px;
+    width: 130px;
+    padding: 8px;
+  }
+
+  #id-form::placeholder {
+    font-family: 'Cabin';
+    font-size: 10px;
+    color: white;
+  }
+
+  #device-id-form > input[type=submit] {
+    font-size: 10px;
+    color: white;
+    height: 30px;
+    background-color: #7F7F7F;
+    border-radius: 3px;
+    border-width: 0;
+    padding: 8px;
   }
 }
 
@@ -343,10 +405,6 @@ label:active:after {
   .navbar-light .navbar-toggler {
     border-color: rgba(0,0,0, 0);
   }
-  .toggle-label {
-    margin: 0 20px 0 20px;
-    font-size: 14px;
-  }
   label {
   	width: 80px;
   	height: 40px;
@@ -358,6 +416,26 @@ label:active:after {
   label:active:after {
   	width: 60px;
   }
+  #profile-image {
+    width: 75px;
+    height: 75px;
+    padding: 3px;
+    margin-left: 60px;
+  }
+  #profile-text {
+    margin-left: 30px;
+  }
+  #name {
+    font-size: 14px;
+  }
+  #email {
+    font-size: 12px;
+  }
+  /* #guitar-image {
+    width: 800px;
+    top: 98px;
+    left: 120px;
+  } */
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -377,4 +455,18 @@ label:active:after {
     /* padding: 10px 15px 7px 15px; */
     /* margin: 0 auto 10px auto; */
   }
+  #profile-image{
+    width: 100px;
+    height: 100px;
+    padding: 3px;
+    margin-left: 100px;
+  }
+  #profile-text {
+    margin-left: 40px;
+  }
+  /* #guitar-image {
+    width: 800px;
+    top: 98px;
+    left: 120px;
+  } */
 }
